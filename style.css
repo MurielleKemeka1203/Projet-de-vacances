@@ -1,0 +1,99 @@
+body{
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+
+}
+
+.navbar{
+	display: flex;
+    justify-content: space-between;
+	height: 90px;
+	color: white;
+	padding: 20 20px;
+	border-width: 10px;
+	background-color: burlywood;
+    position: relative;
+
+}
+.About{
+    padding-left: 10px;
+    padding-top: 35px;
+}
+
+.A{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+    width: 150px;
+
+	
+}
+.ivl{
+    margin-right: 15px;
+	font-weight: white;
+	font-size: 15px;
+
+}
+.iv{
+    margin-right: 15px;
+	font-weight: white;
+	font-size: 15px;
+    padding: 10px;
+    border-radius: 100px;
+    border: 2px solid white;
+    background-color:;
+
+}
+
+
+.B{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 45px;
+    padding-top: 45px;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 80%;
+    
+
+}  
+.publicité{
+    height: 300px;
+    width: 100%;
+       
+} 
+.Entreprise{
+
+
+
+} 
+
+.oll{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+
+
+} 
+.C{
+    display: flex;
+    justify-content: space-between;
+	height: 90px;
+	color: white;
+	padding: 20 20px;
+	border-width: 10px;
+	background-color: burlywood;
+    position: relative;
+    height: 500px;
+    width: 15%;
+    margin-right: 15px;
+} 
+
+
+
