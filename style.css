@@ -5,9 +5,7 @@
 *
 *===============================================================
 */
-:root {
-    --couleur-principale: burlywood;
-}
+
 
 * {
     padding: 0;
@@ -47,7 +45,7 @@ body{
 	color: white;
 	padding: 20 20px;
 	border-width: 10vh;
-	background-color: var(--couleur-principale);
+	background-color: blueviolet;
     position: relative;
     position: fixed;
     width: 100%;
@@ -55,28 +53,36 @@ body{
     z-index: 10000;
 
 }
-.About{
+.Menu{
     padding-left: 10px;
     padding-top: 35px;
 }
 
-.A{
+.Option-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 15px;
-    width: 150px;
+    width: 250px;
 
 	
 }
-.ivl{
-    margin-right: 15px;
+#select-langues{
+    height: 30%;
+    width: 20%;
+   border: none;
+  padding-top: 10px;
+   
+}
+
+.button-login{
+    margin-right: 20px;
 	font-weight: white;
 	font-size: 15px;
     list-style: none;
 
 }
-.iv{
+.button-signup{
     margin-right: 15px;
 	font-weight: white;
 	font-size: 15px;
@@ -88,7 +94,7 @@ body{
 }
 
 
-.B{
+.Barre-de-menu{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -113,7 +119,7 @@ body{
 */
 
 #publicité{
-    height: 40vh;
+    height: 60vh;
     width: 100%;
 }   
 #publicité img{
@@ -125,7 +131,8 @@ body{
 .entreprise{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    height: 180vh;
+    height: 150vh;
+    background-color:beige;
    
 
 }
@@ -136,12 +143,12 @@ body{
     display: flex;
     justify-content: center;
     padding-left: 30px;
-    padding-top: 30px;
+    padding: 10px;
     
 }
 
 #presentation-entreprise img{
-    height:90%;
+    height:70%;
     width:40%;
     display: flex;
     justify-content: center;
@@ -181,12 +188,12 @@ body{
     
 }
 .presentation-offres-entreprise{
-    height: 80%;
+    height: 55%;
     width: 22%;
-    border: 3px solid black;
     margin-right: 2%;
-    margin-bottom: 40px;
-    border-radius: 20px;
+    margin-bottom: 30px;
+    border-radius: none;
+    padding-left: 10px;
    
 }
 .presentation-offres-entreprise img{
@@ -196,24 +203,24 @@ body{
 }
 .description-offre{
     /* border: 1px solid black; */
-    margin: 0;
     font-size: 1em;
-    
+    background-color: white;
+    padding-left: 10px;
 }
 .description-offre h3{
-    margin-bottom: 10px;
+    margin-bottom: 06px;
     font-size: 1em;
 }
 .description-offre h4{
-    margin-bottom: 10px;
+    margin-bottom: 06px;
     font-size: 1em;
 }
 .description-offre h5{
-    margin-bottom: 10px;
+    margin-bottom: 06px;
     font-size: 1em;
 }
 .description-offre h6{
-    margin-bottom: 10px;
+    margin-bottom: 06px;
     font-size: 1em;
 }
 
@@ -222,48 +229,55 @@ body{
     box-shadow: 4px -3px 14px -6px rgba(119, 119, 110, 0.75);
     -webkit-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -webkit-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
-    height: 1300px;
-    width: 300px;
-    
+    height: 150vh;
+   flex-direction: column;
+    position: sticky;
+       
 }
 #barre-de-recherche{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 50px;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid transparent;
-    padding: 10px;
-    border: 2px solid black;
+   display: flex;
+   height: 40px;
+   width: 90%;
+   padding: 10px;
+   margin: 10px;
+  
+
 }
-#barre-de-recherche button {
-    height: 50px;
-    width: 30%;
-    border-radius: none;
-    border: none;
-    border: 2px solid black;
+
+#barre-de-recherche input{
+   height: 22px;
+   width: 80%;
+   border: none;
+   outline: none;
+   padding: 1em;
+   border: 1px solid black;
 }
-.test{
+#barre-de-recherche button{
     height: 50px;
-    width: 80%;
-    border: none;
-    outline: none;
+    width: 20%;
+   
+    
 }
+#barre-de-recherche button img{
+    height: 50%;
+    width: 50%;
+   color: white;
+}
+
 .filière{
     display: flex;
     flex-direction: column;
 	color: black;
 	border-width: 10vh;
     width: 55%;
+    padding-top: 20px;
     
     
     
 }
 .filière li{
-    padding: 10px;  
-    padding-top: 10px;  
+    padding: 30px;  
+    padding-top: 30px;  
 
 }
 
@@ -273,9 +287,8 @@ body{
     align-items: center;
     height: 10vh;
     width: 100%;
-    background-color: blueviolet;
+    background-color: grey;
     color: white;
-    border: 1px solid white;
     font-size: 2em;
     	
 }
@@ -286,7 +299,6 @@ body{
     width: 100%;
     background-color: grey;
     color: white;
-    border: 1px solid white;
     
 }
 .partenaire{
@@ -333,11 +345,8 @@ body{
     align-items: center;
     height: 25vh;
     width: 100%;
-    background-color: grey;
-    color: white;
-    border: 1px solid white;
-    
-   
+    background-color: black;
+    color: white;  
 }
 #newsletter p{
     padding-top: 15px;
@@ -382,7 +391,7 @@ body{
 *===============================================================
 */
 #section-pied-de-page{
-	height: 70vh;
+	height: 55vh;
     width: 100%;
     background-color: black;
     
@@ -399,15 +408,15 @@ body{
     padding-right: 40px;
 }
 .first{
-	margin: 30px 0 0 300px;
+	margin: 10px 0 0 0;
 	
 }
 .second{
-		margin: 30px 0 0 150px;
+		margin: 10px 0 0 100px;
 
 }
 .third{
-		margin: 30px 0 0 150px;
+		margin: 10px 0 0 100px;
 
 }
 .pied-de-page1{
@@ -418,20 +427,18 @@ body{
     padding: 10px;
     padding-left: 90px;
 }
-.pied-de-page p{
-    padding-top: 100px;
-}
+
 .pied-de-page2{
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px;
+    margin: 05px;
     padding-left: 40px;
 }
 .image-pied-de-page{
     display: flex;
-    height: 50px;
+    height: 30px;
     width: 35px;
    
     
@@ -466,8 +473,14 @@ body{
 }
 .pied-de-page-reseau img{
     display: flex;
+    height: 30px;
+    width: 21px;
+}
+#pied-de-page-image img{
+    display: flex;
     height: 50px;
-    width: 35px;
+    width: 80px;
+   
 }
 
 
