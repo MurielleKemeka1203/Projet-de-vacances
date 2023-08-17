@@ -29,85 +29,126 @@ li {
 *===============================================================
 */
 
-body{
-	background-color: white;
-	box-sizing: border-box;
-	width: 100%;
-    margin: 0;
-    padding: 0;
-
-}
-
-.navbar{
-	display: flex;
-    justify-content: space-between;
-	height: 12vh;
-	color: white;
-	padding: 20 20px;
-	border-width: 10vh;
-	background-color: blueviolet;
-    position: relative;
+header{
     position: fixed;
     width: 100%;
-    list-style: none;
-    z-index: 10000;
-
-}
-.Menu{
-    padding-left: 10px;
-    padding-top: 35px;
-}
-
-.Option-menu{
     display: flex;
+    padding: 0.2em;
     justify-content: space-between;
-    align-items: center;
-    margin-right: 15px;
-    width: 250px;
-
-	
-}
-#select-langues{
-    height: 30%;
-    width: 20%;
-   border: none;
-  padding-top: 10px;
-   
-}
-
-.button-login{
-    margin-right: 20px;
-	font-weight: white;
-	font-size: 15px;
-    list-style: none;
-
-}
-.button-signup{
-    margin-right: 15px;
-	font-weight: white;
-	font-size: 15px;
-    padding: 10px;
-    border-radius: 100px;
-    border: 2px solid white;
-    list-style: none;
-
-}
-
-
-.Barre-de-menu{
-    display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     flex-direction: row;
-    padding-left: 45px;
-    padding-top: 45px;
+    height: 12vh;
+    background-color: blueviolet;
+    z-index: 1000;
+}
+#image-logo{
+    height: 90%;
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.option-menu{
+    margin-top: 0.6px;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#languages-select{
+    background-color:blueviolet;
+    color: white;
+    font-size: 1em;
+}
+#login-button{
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+#signup-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100px;
+    height: 30px;
+    width: 70px;
+}
+.navbar{
     position: absolute;
     bottom: 0;
-    left: 5%;
-    width: 80%;
-    list-style: none;
-    margin: 15px;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 45%;
+    width: 100%;
+    gap: 1Opx;
 
-}  
+}
+.navbar .search{
+    height: 100%;
+    width:30%;
+    display:flex;
+    padding-left: 10%;
+    justify-content:0.6em;
+    position: relative;
+    bottom: 20px;
+}
+.navbar .search button{
+    height: 90%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.navbar .search button img{
+    height: 60%;
+    width: 60%;
+
+}
+.navbar .search input{
+    height: 90%;
+    width: 90%;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.navbar nav{
+   padding: 1em;
+   height: 45%;
+    width: 70%;
+   display: grid;
+   grid-template-columns: repeat(7,1fr);
+   place-items: center;
+}
+.nav-link{
+    color: white;
+    font-size: 0.9em;
+    outline: none;
+     transition: 0.2s ease;
+     height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-link-active{
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    
+}
+.nav-link:hover{
+    background-color: rgba(0, 0, 0, 0.37);
+}
 
 
 /*
@@ -121,11 +162,20 @@ body{
 #publicité{
     height: 60vh;
     width: 100%;
+    position: relative;
 }   
-#publicité img{
+.pub-image{
+    position: absolute;
+    top: 0;
+    left: 0;
      height: inherit;
      width: inherit;
      object-fit: cover;
+     opacity: 0;
+     transition: 1s ease;
+}
+.current{
+    opacity: 1;
 }
 
 .entreprise{
@@ -148,7 +198,7 @@ body{
 }
 
 #presentation-entreprise img{
-    height:70%;
+    height:110%;
     width:40%;
     display: flex;
     justify-content: center;
@@ -206,6 +256,7 @@ body{
     font-size: 1em;
     background-color: white;
     padding-left: 10px;
+    position: relative;
 }
 .description-offre h3{
     margin-bottom: 06px;
@@ -222,6 +273,15 @@ body{
 .description-offre h6{
     margin-bottom: 06px;
     font-size: 1em;
+}
+.description-offre img{
+    position: absolute;
+    bottom: 10px;
+    right: 08px;
+    height: 30%;
+    width: fit-content;
+    object-fit: contain;
+    
 }
 
 #domaine{
@@ -449,7 +509,8 @@ body{
    
 }
 .pied-de-page2 h1{
-    font-size: 1.2em;
+    font-size: 0.9em;
+     padding-top: 05px;
 }
 .pied-de-page-contact{
     display: flex;
@@ -458,7 +519,6 @@ body{
     display: flex;
     height: 50px;
     width: 80px;
-    
 }
 .pied-de-page-email{
     display: flex;
@@ -467,6 +527,7 @@ body{
     display: flex;
     height: 50px;
     width: 80px;
+   
 }
 .pied-de-page-reseau{
     display: flex;
@@ -475,6 +536,7 @@ body{
     display: flex;
     height: 30px;
     width: 21px;
+   
 }
 #pied-de-page-image img{
     display: flex;
