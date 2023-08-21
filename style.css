@@ -49,34 +49,46 @@ header{
     left: 10px;
     transform: translateY(-50%);
 }
-.option-menu{
-    margin-top: 0.6px;
-    width: 25%;
+.option-menu {
+    margin-top: 0.6em;
+    width: 15%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
-#languages-select{
-    background-color:blueviolet;
-    color: white;
+
+#language-select {
+    background-color: var(--primary-color);
+    color: var(--primary-fg);
     font-size: 1em;
 }
+
 #login-button{
+    background-color: transparent;
     color: white;
     font-size: 1em;
     font-weight: 600;
     transition: 0.2s ease;
 }
-#signup-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#login-button:hover {
+    color: var(--cover-color);
+}
+
+#signup-button {
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: var(--primary-color);
     color: white;
-    border: 1px solid white;
-    border-radius: 100px;
-    height: 30px;
-    width: 70px;
+    font-size: 1em;
+    transition: background-color color 0.2s ease;
+}
+
+#signup-button:hover {
+    background-color: var(--cover-color);
+    color: var(--cover-fg);
+    font-weight: 600;
 }
 .navbar{
     position: absolute;
@@ -182,7 +194,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 4fr;
     height: 150vh;
-    background-color:beige;
+    background-color:white;
    
 
 }
@@ -226,6 +238,80 @@ header{
 .titre-offre{
     margin: 40px;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    margin: 30px;
+}
+.pagination{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(241, 237, 229);
+   color: #008080;
+   padding: 20px 20px;
+   border-radius: 70px;
+   width: fit-content;
+   
+}
+.pagination ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.pagination ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(230, 199, 199, 0.767);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 45px;
+}
+
+.pagination ul .link-active{
+      color: #fff;
+      background-repeat: no repeat;
+      background-image: linear-gradient(#ff4568, #ff4500);
+}
+.pagination ul .link:hover{
+    background-color: rgba(0, 0, 0, 0.397);
+}
+.pagination .button1, .button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: #383838;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 5vh;
+    width: 5vh;
+    
+
+}
+.pagination .button1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.pagination .button2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 .presentation-offres{
     display: flex;
     flex-direction: row;
@@ -244,7 +330,12 @@ header{
     margin-bottom: 30px;
     border-radius: none;
     padding-left: 10px;
+    display: none;
+    flex-direction: column;
    
+}
+.offre-visible{
+    display: flex;
 }
 .presentation-offres-entreprise img{
     height: 60%;
@@ -294,51 +385,29 @@ header{
     position: sticky;
        
 }
-#barre-de-recherche{
-   display: flex;
-   height: 40px;
-   width: 90%;
-   padding: 10px;
-   margin: 10px;
-  
-
+#filière {
+    height: 90%;
+    color: var(--cover-fg);
+    overflow-y: scroll;
 }
 
-#barre-de-recherche input{
-   height: 22px;
-   width: 80%;
-   border: none;
-   outline: none;
-   padding: 1em;
-   border: 1px solid black;
-}
-#barre-de-recherche button{
-    height: 50px;
-    width: 20%;
-   
-    
-}
-#barre-de-recherche button img{
-    height: 50%;
-    width: 50%;
-   color: white;
-}
-
-.filière{
+.field-item {
+    padding: 1em 2em;
+    width: 100%;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-	color: black;
-	border-width: 10vh;
-    width: 55%;
-    padding-top: 20px;
-    
-    
-    
+    justify-content: flex-start;
+    align-items: center;
 }
-.filière li{
-    padding: 30px;  
-    padding-top: 30px;  
 
+.field-item img {
+    height: 30px;
+    width: 30px;
+    margin-right: 2em;
+}
+
+.field-item:hover {
+    background-color: rgba(0, 0, 0, 0.174);
 }
 
 .acteur1{
